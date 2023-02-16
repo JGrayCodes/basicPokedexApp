@@ -51,25 +51,27 @@ function logic() {
     /* --- Part 2 : Creating other DOM Objects --- */
         
     // Create HTML li element here (const pokedexEntry)
-
+    const pokedexEntry = document.createElement("li")
 
     // Give pokedexEntry (li) a new class equal to the "type" property of the pokemon object
-
+    pokedexEntry.className = (pokemon[1])
 
     // Creating a preview button (using a Template Literal)
     // this code is for an html form that will Google search the name of the pokemon
-        const previewButton = `
-            <form action="http://google.com/search" target="_blank">
-                <input name="q" hidden value="${pokemon[0]}">
-                <input type="submit">
-            </form>
-        `
-        console.log(pokemon[0]); //logging the "pokemon" variable at index 0 (which is the name) 
-    
+    const previewButton = `
+        <form action="http://google.com/search" target="_blank">
+            <input name="q" hidden value="${pokemon[0]}">
+            <input type="submit">
+        </form>
+    `
+    console.log(pokemon[0]); //logging the "pokemon" variable at index 0 (which is the name) 
+    console.log(pokemon[1]); //logging the "pokemon" variable at index 1 (which is the type) 
+    console.log(pokemon[2]); //logging the "pokemon" variable at index 2 (which is the region) 
+
     /* --- Part 3 : Add things into the DOM --- */
 
     // Firstly append pokemonData to the innerHTML of pokedexEntry
-
+        
 
     // Secondly append the previewButton to innerHTML of pokedexEntry
 

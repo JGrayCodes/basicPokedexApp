@@ -17,7 +17,7 @@ function logic() {
     
 
     // Can log them since they are now pure Strings
-    console.log( name + " - " + type + " - " + region + " region") // remove once you have clear understanding
+    console.log( name + " - " + type + " - " + region + " region"); // remove once you have clear understanding
 
 /*-----------------------------------------------
  * Add your solution code here
@@ -25,24 +25,38 @@ function logic() {
 
     /* --- Part 1 : Create pokemon data Object --- */
 
-				// Use If to ensure input validation (ensure input fields are !empty)
-        // Create pokemon object here (const pokemon) using user input Strings
+	// Use If to ensure input validation (ensure input fields are !empty)
 
+    if (name === "" || type ==="" || region === "") // "" denotes blank string
+        {
+        document.getElementById("invalidInput").innerHTML = "Please make sure you have completed each entry"
+        }
 
-        // Create a span element (const pokemonData) and put the pokemon objects properties inside of it
+    // Create pokemon object here (const pokemon) using user input Strings
+    const pokemon = [name, type, region];
 
+    console.log(pokemon);
 
+    // Create a span element (const pokemonData) and put the pokemon objects properties inside of it
+
+    const pokemonData = document.createElement("span");
+    pokemonData.innerHTML = 
+        " Pokemon name: " + pokemon[0] + 
+        " Pokemon type: " + pokemon[1] +
+        " Pokemon region: " + pokemon[2]
+
+    console.log(pokemonData)
 
     /* --- Part 2 : Creating other DOM Objects --- */
         
-        // Create HTML li element here (const pokedexEntry)
+    // Create HTML li element here (const pokedexEntry)
 
 
-        // Give pokedexEntry (li) a new class equal to the "type" property of the pokemon object
+    // Give pokedexEntry (li) a new class equal to the "type" property of the pokemon object
 
 
-        // Creating a preview button (using a Template Literal)
-        // this code is for an html form that will Google search the name of the pokemon
+    // Creating a preview button (using a Template Literal)
+    // this code is for an html form that will Google search the name of the pokemon
         const previewButton = `
             <form action="http://google.com/search" target="_blank">
                 <input name="q" hidden value="${name}">
@@ -53,14 +67,14 @@ function logic() {
     
     /* --- Part 3 : Add things into the DOM --- */
 
-        // Firstly append pokemonData to the innerHTML of pokedexEntry
+    // Firstly append pokemonData to the innerHTML of pokedexEntry
 
 
-        // Secondly append the previewButton to innerHTML of pokedexEntry
+    // Secondly append the previewButton to innerHTML of pokedexEntry
 
 
-        // Lastly we will get the ul List element that is meant to contain all pokedex entries
-        // The we will append pokedexEntry to the innerHTML of the pokedexEntries ul element
+    // Lastly we will get the ul List element that is meant to contain all pokedex entries
+    // The we will append pokedexEntry to the innerHTML of the pokedexEntries ul element
 
 
 /*-----------------------------------------------

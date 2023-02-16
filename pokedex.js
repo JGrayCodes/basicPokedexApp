@@ -27,7 +27,8 @@ function logic() {
 
 	// Use If to ensure input validation (ensure input fields are !empty)
 
-    if (name === "" || type ==="" || region === "") // "" denotes blank string
+    if (name.trim() === "" || type.trim() ==="" || region.trim() === "") 
+    // used trim() method to remove any white space, "" denotes blank string
         {
         document.getElementById("invalidInput").innerHTML = "Please make sure you have completed each entry"
         }
@@ -35,7 +36,7 @@ function logic() {
     // Create pokemon object here (const pokemon) using user input Strings
     const pokemon = [name, type, region];
 
-    console.log(pokemon);
+    console.log(pokemon); //logging the "pokemon" variable 
 
     // Create a span element (const pokemonData) and put the pokemon objects properties inside of it
 
@@ -59,11 +60,11 @@ function logic() {
     // this code is for an html form that will Google search the name of the pokemon
         const previewButton = `
             <form action="http://google.com/search" target="_blank">
-                <input name="q" hidden value="${name}">
+                <input name="q" hidden value="${pokemon[0]}">
                 <input type="submit">
             </form>
         `
-
+        console.log(pokemon[0]); //logging the "pokemon" variable at index 0 (which is the name) 
     
     /* --- Part 3 : Add things into the DOM --- */
 

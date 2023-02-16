@@ -41,12 +41,23 @@ function logic() {
     // Create a span element (const pokemonData) and put the pokemon objects properties inside of it
 
     const pokemonData = document.createElement("span");
-    pokemonData.innerHTML = 
-        " Pokemon name: " + pokemon[0] + 
-        " Pokemon type: " + pokemon[1] +
-        " Pokemon region: " + pokemon[2]
+
+    let nameNode = document.createTextNode("Pokemon name:" + pokemon[0] );
+    let typeNode = document.createTextNode("Pokemon type:" + pokemon[1] );
+    let regionNode = document.createTextNode("Pokemon region:" + pokemon[2] );
+
+    pokemonData.appendChild(nameNode);
+    pokemonData.appendChild(typeNode);
+    pokemonData.appendChild(regionNode);
 
     console.log(pokemonData)
+
+
+    // pokemonData.innerHTML = 
+    //     " Pokemon name: " + pokemon[0] + 
+    //     " Pokemon type: " + pokemon[1] +
+    //     " Pokemon region: " + pokemon[2]
+
 
     /* --- Part 2 : Creating other DOM Objects --- */
         
@@ -70,14 +81,20 @@ function logic() {
 
     /* --- Part 3 : Add things into the DOM --- */
 
+    console.log(pokemonData)
+
     // Firstly append pokemonData to the innerHTML of pokedexEntry
     pokedexEntry.appendChild(pokemonData);
 
-    // Secondly append the previewButton to innerHTML of pokedexEntry
-    pokedexEntry.appendChild(previewButton);
+    console.log(pokedexEntry)
 
+    // Secondly append the previewButton to innerHTML of pokedexEntry
+    pokedexEntry.innerHTML += previewButton;
+
+    console.log(pokedexEntry)
 
     // Lastly we will get the ul List element that is meant to contain all pokedex entries
+    document.getElementById("pokedexEntries").appendChild(pokedexEntry);
     // The we will append pokedexEntry to the innerHTML of the pokedexEntries ul element
 
 

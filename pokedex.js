@@ -71,9 +71,10 @@ function logic() {
     /* --- Part 3 : Add things into the DOM --- */
 
     // Firstly append pokemonData to the innerHTML of pokedexEntry
-        
+    pokedexEntry.appendChild(pokemonData);
 
     // Secondly append the previewButton to innerHTML of pokedexEntry
+    pokedexEntry.appendChild(previewButton);
 
 
     // Lastly we will get the ul List element that is meant to contain all pokedex entries

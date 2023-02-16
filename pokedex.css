@@ -12,6 +12,7 @@
 }
 
 .dark {
+    color: white; /* for better contrast between text and background */
     background-color: #705746;
 }
 
@@ -40,6 +41,7 @@
 }
 
 .ghost {
+    color: white; /* for better contrast between text and background */
     background-color: #735797;
 }
 
@@ -123,6 +125,11 @@ flex: 1;
 background-color: rgb(255, 255, 255);
 flex: 9;
 padding: 1.5rem;
+}
+
+#invalidInput {
+text-align: center;
+font-weight: bold;
 }
 
 #createForm {

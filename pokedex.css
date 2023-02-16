@@ -5,27 +5,81 @@
 /* --- Modal Styling ---*/
 
 
-/* --- Dynamic classes for types ---*/
+/* --- Dynamic classes for types (Note: got colors from https://gist.github.com/apaleslimghost/0d25ec801ca4fc43317bcff298af43c3 ---*/
     
-.water {
-    background-color: rgb(101, 174, 216);
+.bug {
+    background-color: #A6B91A;
 }
 
-.normal {
-    background-color: rgb(212, 212, 212);
+.dark {
+    background-color: #705746;
 }
 
-.grass {
-    background-color: rgb(110, 212, 110);
-}
-
-.fire {
-    background-color: rgb(182, 92, 92);
+.dragon {
+    background-color: #6F35FC;
 }
 
 .electric {
-    background-color: rgb(238, 212, 98);
+    background-color: #F7D02C;
 }
+
+.fairy {
+    background-color: #D685AD;
+}
+
+.fighting {
+    background-color: #C22E28;
+}
+
+.fire {
+    background-color: #EE8130;
+}
+
+.flying {
+    background-color: #A98FF3;
+}
+
+.ghost {
+    background-color: #735797;
+}
+
+.grass {
+    background-color: #7AC74C;
+}
+
+.ground {
+    background-color: #E2BF65;
+}
+
+.ice {
+    background-color: #96D9D6;
+}
+
+.normal {
+    background-color: #A8A77A;
+}
+
+.poison {
+    background-color: #A33EA1;
+}
+
+.psychic {
+    background-color: #F95587;
+}
+
+.rock {
+    background-color: #B6A136;
+}   
+
+.steel {
+    background-color: #B7B7CE;
+}
+
+.water {
+    background-color: #6390F0;
+}
+
+
 
 
 /* ------------------------------------------
